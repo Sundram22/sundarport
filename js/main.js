@@ -407,11 +407,11 @@ document.getElementById('contactForm').addEventListener('submit', async function
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       });
-      showStatus('success', '✓ Message bhej diya! Sundram jaldi reply karega. 🚀');
+      showStatus('success', 'Message Sent. 🚀');
       form.reset();
     }
   } catch (err) {
-    showStatus('error', '✗ Network error. Seedha WhatsApp karo ya email karo!');
+    showStatus('error', '✗ Network error.');
   }
 
   btn.textContent = 'Send Message →';
