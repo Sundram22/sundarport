@@ -1,23 +1,3 @@
-/* ============================================
-   SUNDRAM TIWARI — PORTFOLIO JS V2
-   ALL FEATURES:
-   - Loading Screen
-   - Particle Background
-   - Custom Cursor
-   - Typing Effect
-   - Dark/Light Mode
-   - Scroll Progress Bar
-   - Back to Top
-   - Skill Filter
-   - Project Filter
-   - Testimonials Slider
-   - Counter Animation
-   - Proficiency Bars
-   - Scroll Reveal
-   - Nav Scroll Effect
-   - Google Sheets Form
-   ============================================ */
-
 /* ══════════════════════════════════════════
    1. LOADING SCREEN
 ══════════════════════════════════════════ */
