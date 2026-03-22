@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sundram Tiwari — Data Scientist & ML Engineer. Expert in Machine Learning, Deep Learning, NLP and Data Visualization.">
+<meta name="keywords" content="Sundram Tiwari, Data Scientist, Machine Learning, AI, Python, Portfolio">
+<meta name="author" content="Sundram Tiwari">
+<meta property="og:title" content="Sundram Tiwari — Data Scientist">
+<meta property="og:description" content="Turning raw data into actionable intelligence.">
+<meta property="og:type" content="website">
+<title>Sundram Tiwari — Data Scientist & ML Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">ST<span>.</span></div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <div class="loader-text">Initializing Portfolio<span class="loader-dots">...</span></div>
+  </div>
+</div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- SCROLL PROGRESS BAR -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- GRID BG -->
+<div class="grid-bg"></div>
+
+<!-- PARTICLE CANVAS -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" title="Back to top">↑</button>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/919999999999?text=Hello%20Sundram!%20I%20saw%20your%20portfolio." 
+   target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- DARK/LIGHT TOGGLE -->
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">
+  <span class="theme-icon">🌙</span>
+</button>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">ST<span>.</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact-section">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="resume.pdf" download class="btn-resume">↓ Resume</a>
+    <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag">// Data Science Portfolio</div>
+      <h1 class="hero-name">
+        Sundram
+        <span class="highlight">Tiwari</span>
+      </h1>
+      <div class="hero-title">
+        <span id="typingText"></span><span class="blink">_</span>
+      </div>
+      <p class="hero-desc">
+        Turning raw data into actionable intelligence. I build machine learning models,
+        visualize complex datasets, and extract insights that drive real-world decisions.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact-section" class="btn-outline">Let's Connect</a>
+        <a href="resume.pdf" download class="btn-outline">↓ Resume</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/sundramtiwari" target="_blank" class="social-link">GitHub</a>
+        <a href="https://linkedin.com/in/sundramtiwari" target="_blank" class="social-link">LinkedIn</a>
+        <a href="https://kaggle.com/sundramtiwari" target="_blank" class="social-link">Kaggle</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="data-orb">
+        <div class="orb-ring"></div>
+        <div class="orb-ring"></div>
+        <div class="orb-ring"></div>
+        <div class="orb-core"></div>
+        <div class="orb-dot" style="top:20px;left:50%;"></div>
+        <div class="orb-dot" style="bottom:30px;right:40px;background:var(--accent2);box-shadow:0 0 12px var(--accent2);"></div>
+        <div class="orb-dot" style="top:50%;left:10px;background:var(--accent3);box-shadow:0 0 12px var(--accent3);"></div>
+        <div class="floating-card" style="top:0;right:-20px;">
+          <div class="card-label">Model Accuracy</div>
+          <div class="card-value">98.4%</div>
+        </div>
+        <div class="floating-card" style="bottom:40px;left:-40px;animation-delay:1.5s;">
+          <div class="card-label">Datasets Processed</div>
+          <div class="card-value">50+ TB</div>
+        </div>
+        <div class="floating-card" style="top:50%;right:-50px;animation-delay:0.8s;">
+          <div class="card-label">Avg F1 Score</div>
+          <div class="card-value">0.961</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-down">
+    <div class="scroll-line"></div>
+    <span class="scroll-label">Scroll</span>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item"><span class="stat-num" data-target="30">0</span><span class="stat-label">Projects Completed</span></div>
+  <div class="stat-item"><span class="stat-num" data-target="5">0</span><span class="stat-label">Years Experience</span></div>
+  <div class="stat-item"><span class="stat-num" data-target="15">0</span><span class="stat-label">ML Models Deployed</span></div>
+  <div class="stat-item"><span class="stat-num" data-target="10">0</span><span class="stat-label">Clients Served</span></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header scroll-reveal">
+    <span class="section-tag">01 / About</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-text scroll-reveal">
+      <div class="section-title" style="margin-bottom:32px;">Passionate about <em>Data &amp; Intelligence</em></div>
+      <p>Namaste! I'm <strong>Sundram Tiwari</strong>, a Data Scientist based in India with a deep passion for machine learning, statistical modeling, and turning messy data into crystal-clear insights.</p>
+      <p>My journey began with a fascination for patterns hidden in numbers. Today, I build <strong>end-to-end ML pipelines</strong>, work with large-scale datasets, and create data visualizations that tell compelling stories.</p>
+      <p>Whether it's predicting customer churn, building NLP models, or designing <strong>real-time dashboards</strong> — I bring analytical rigor and creative problem-solving to every project.</p>
+    </div>
+    <div class="about-facts scroll-reveal">
+      <div class="fact-row"><div class="fact-icon">🎓</div><div class="fact-content"><div class="fact-label">Education</div><div class="fact-value">B.Tech / M.Tech — Computer Science</div></div></div>
+      <div class="fact-row"><div class="fact-icon">📍</div><div class="fact-content"><div class="fact-label">Location</div><div class="fact-value">India</div></div></div>
+      <div class="fact-row"><div class="fact-icon">🧠</div><div class="fact-content"><div class="fact-label">Specialization</div><div class="fact-value">ML, Deep Learning, NLP, Data Viz</div></div></div>
+      <div class="fact-row"><div class="fact-icon">🌐</div><div class="fact-content"><div class="fact-label">Languages</div><div class="fact-value">Hindi, English</div></div></div>
+      <div class="fact-row"><div class="fact-icon">⚡</div><div class="fact-content"><div class="fact-label">Available For</div><div class="fact-value">Freelance &amp; Full-time Opportunities</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="padding-top:0;">
+  <div class="section-header scroll-reveal">
+    <span class="section-tag">02 / Services</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="section-title scroll-reveal" style="margin-bottom:48px;">What I <em>Offer</em></div>
+  <div class="services-grid">
+    <div class="service-card scroll-reveal">
+      <div class="service-icon">🤖</div>
+      <div class="service-title">ML Model Development</div>
+      <div class="service-desc">Custom machine learning models built from scratch — classification, regression, clustering, time series forecasting.</div>
+      <div class="service-price">Starting ₹15,000</div>
+    </div>
+    <div class="service-card scroll-reveal">
+      <div class="service-icon">📊</div>
+      <div class="service-title">Data Analysis & Dashboards</div>
+      <div class="service-desc">Deep exploratory analysis, interactive dashboards using Tableau, Power BI, or custom Plotly visualizations.</div>
+      <div class="service-price">Starting ₹8,000</div>
+    </div>
+    <div class="service-card scroll-reveal">
+      <div class="service-icon">💬</div>
+      <div class="service-title">NLP Solutions</div>
+      <div class="service-desc">Chatbots, sentiment analysis, text classification, named entity recognition using BERT and transformer models.</div>
+      <div class="service-price">Starting ₹20,000</div>
+    </div>
+    <div class="service-card scroll-reveal">
+      <div class="service-icon">☁️</div>
+      <div class="service-title">ML Deployment & MLOps</div>
+      <div class="service-desc">Deploy your ML models to production with FastAPI, Docker, and cloud platforms (AWS/GCP). CI/CD pipelines included.</div>
+      <div class="service-price">Starting ₹25,000</div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="padding-top:0;">
+  <div class="section-header scroll-reveal">
+    <span class="section-tag">03 / Skills</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="section-title scroll-reveal" style="margin-bottom:48px;">My <em>Technical Arsenal</em></div>
+
+  <!-- Filter Buttons -->
+  <div class="filter-btns scroll-reveal">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="ml">ML / AI</button>
+    <button class="filter-btn" data-filter="data">Data</button>
+    <button class="filter-btn" data-filter="cloud">Cloud</button>
+    <button class="filter-btn" data-filter="lang">Languages</button>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card scroll-reveal" data-category="ml">
+      <span class="skill-card-icon">🤖</span>
+      <div class="skill-card-title">Machine Learning</div>
+      <div class="skill-card-desc">Building and deploying predictive models using classical and modern ML techniques.</div>
+      <div class="skill-tags"><span class="skill-tag">Scikit-learn</span><span class="skill-tag">XGBoost</span><span class="skill-tag">LightGBM</span><span class="skill-tag">SVM</span></div>
+    </div>
+    <div class="skill-card scroll-reveal" data-category="ml">
+      <span class="skill-card-icon">🧬</span>
+      <div class="skill-card-title">Deep Learning</div>
+      <div class="skill-card-desc">Neural architectures for vision, NLP, and sequential data tasks.</div>
+      <div class="skill-tags"><span class="skill-tag">TensorFlow</span><span class="skill-tag">PyTorch</span><span class="skill-tag">Keras</span><span class="skill-tag">CNN</span></div>
+    </div>
+    <div class="skill-card scroll-reveal" data-category="ml">
+      <span class="skill-card-icon">💬</span>
+      <div class="skill-card-title">NLP &amp; LLMs</div>
+      <div class="skill-card-desc">Text classification, sentiment analysis, and large language models.</div>
+      <div class="skill-tags"><span class="skill-tag">BERT</span><span class="skill-tag">HuggingFace</span><span class="skill-tag">LangChain</span><span class="skill-tag">SpaCy</span></div>
+    </div>
+    <div class="skill-card scroll-reveal" data-category="data">
+      <span class="skill-card-icon">📊</span>
+      <div class="skill-card-title">Data Analysis</div>
+      <div class="skill-card-desc">Exploratory analysis, statistical modeling, and interactive dashboards.</div>
+      <div class="skill-tags"><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span><span class="skill-tag">Plotly</span><span class="skill-tag">Tableau</span></div>
+    </div>
+    <div class="skill-card scroll-reveal" data-category="cloud">
+      <span class="skill-card-icon">☁️</span>
+      <div class="skill-card-title">Cloud &amp; MLOps</div>
+      <div class="skill-card-desc">Deploying ML models at scale with CI/CD pipelines.</div>
+      <div class="skill-tags"><span class="skill-tag">AWS</span><span class="skill-tag">GCP</span><span class="skill-tag">Docker</span><span class="skill-tag">MLflow</span></div>
+    </div>
+    <div class="skill-card scroll-reveal" data-category="lang">
+      <span class="skill-card-icon">🗄️</span>
+      <div class="skill-card-title">Data Engineering</div>
+      <div class="skill-card-desc">Data pipelines, ETL processes, and large-scale databases.</div>
+      <div class="skill-tags"><span class="skill-tag">SQL</span><span class="skill-tag">Spark</span><span class="skill-tag">Airflow</span><span class="skill-tag">MongoDB</span></div>
+    </div>
+  </div>
+
+  <div class="prof-grid scroll-reveal">
+    <div class="prof-item"><div class="prof-header"><span class="prof-name">Python</span><span class="prof-pct">95%</span></div><div class="prof-bar"><div class="prof-fill" data-width="95"></div></div></div>
+    <div class="prof-item"><div class="prof-header"><span class="prof-name">Machine Learning</span><span class="prof-pct">90%</span></div><div class="prof-bar"><div class="prof-fill" data-width="90"></div></div></div>
+    <div class="prof-item"><div class="prof-header"><span class="prof-name">Deep Learning</span><span class="prof-pct">85%</span></div><div class="prof-bar"><div class="prof-fill" data-width="85"></div></div></div>
+    <div class="prof-item"><div class="prof-header"><span class="prof-name">SQL &amp; Databases</span><span class="prof-pct">88%</span></div><div class="prof-bar"><div class="prof-fill" data-width="88"></div></div></div>
+    <div class="prof-item"><div class="prof-header"><span class="prof-name">Data Visualization</span><span class="prof-pct">92%</span></div><div class="prof-bar"><div class="prof-fill" data-width="92"></div></div></div>
+    <div class="prof-item"><div class="prof-header"><span class="prof-name">Cloud / MLOps</span><span class="prof-pct">78%</span></div><div class="prof-bar"><div class="prof-fill" data-width="78"></div></div></div>
+  </div>
+
+  <div class="tech-stack scroll-reveal">
+    <div class="tech-item"><div class="tech-dot"></div>Python</div>
+    <div class="tech-item"><div class="tech-dot"></div>R</div>
+    <div class="tech-item"><div class="tech-dot"></div>TensorFlow</div>
+    <div class="tech-item"><div class="tech-dot"></div>PyTorch</div>
+    <div class="tech-item"><div class="tech-dot"></div>Scikit-learn</div>
+    <div class="tech-item"><div class="tech-dot"></div>Pandas</div>
+    <div class="tech-item"><div class="tech-dot"></div>SQL</div>
+    <div class="tech-item"><div class="tech-dot"></div>Apache Spark</div>
+    <div class="tech-item"><div class="tech-dot"></div>Docker</div>
+    <div class="tech-item"><div class="tech-dot"></div>AWS / GCP</div>
+    <div class="tech-item"><div class="tech-dot"></div>FastAPI</div>
+    <div class="tech-item"><div class="tech-dot"></div>Tableau</div>
+    <div class="tech-item"><div class="tech-dot"></div>Git</div>
+    <div class="tech-item"><div class="tech-dot"></div>Jupyter</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="padding-top:0;">
+  <div class="section-header scroll-reveal">
+    <span class="section-tag">04 / Projects</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="section-title scroll-reveal" style="margin-bottom:32px;">Featured <em>Work</em></div>
+
+  <!-- Project Filter -->
+  <div class="filter-btns scroll-reveal">
+    <button class="filter-btn active" data-pfilter="all">All</button>
+    <button class="filter-btn" data-pfilter="ml">ML</button>
+    <button class="filter-btn" data-pfilter="nlp">NLP</button>
+    <button class="filter-btn" data-pfilter="viz">Data Viz</button>
+    <button class="filter-btn" data-pfilter="deploy">Deployment</button>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card featured scroll-reveal" data-ptag="ml deploy">
+      <div>
+        <div class="project-num">// 01 — Featured</div>
+        <div class="project-title">Real-Time Fraud Detection System</div>
+        <div class="project-desc">End-to-end ML pipeline for detecting financial fraud. 98.4% accuracy, deployed on AWS with sub-100ms latency.</div>
+        <div class="project-chips"><span class="chip">Python</span><span class="chip">XGBoost</span><span class="chip">Kafka</span><span class="chip">AWS</span><span class="chip">FastAPI</span></div>
+        <a href="#" class="project-link">View Project →</a>
+      </div>
+      <div class="featured-visual">🔍</div>
+    </div>
+    <div class="project-card scroll-reveal" data-ptag="nlp">
+      <div class="project-num">// 02</div>
+      <div class="project-title">Sentiment Analysis at Scale</div>
+      <div class="project-desc">NLP pipeline processing 1M+ tweets daily. Fine-tuned BERT with 94% F1 score.</div>
+      <div class="project-chips"><span class="chip">BERT</span><span class="chip">HuggingFace</span><span class="chip">Spark</span></div>
+      <a href="#" class="project-link">View Project →</a>
+    </div>
+    <div class="project-card scroll-reveal" data-ptag="ml viz">
+      <div class="project-num">// 03</div>
+      <div class="project-title">Customer Churn Prediction</div>
+      <div class="project-desc">Predictive model reducing churn by 23%. Interactive Power BI dashboard for stakeholders.</div>
+      <div class="project-chips"><span class="chip">LightGBM</span><span class="chip">SHAP</span><span class="chip">Power BI</span></div>
+      <a href="#" class="project-link">View Project →</a>
+    </div>
+    <div class="project-card scroll-reveal" data-ptag="ml deploy">
+      <div class="project-num">// 04</div>
+      <div class="project-title">Medical Image Classification</div>
+      <div class="project-desc">CNN detecting pneumonia from X-rays. 97% accuracy using transfer learning on 10K+ images.</div>
+      <div class="project-chips"><span class="chip">PyTorch</span><span class="chip">ResNet</span><span class="chip">GCP</span></div>
+      <a href="#" class="project-link">View Project →</a>
+    </div>
+    <div class="project-card scroll-reveal" data-ptag="ml deploy">
+      <div class="project-num">// 05</div>
+      <div class="project-title">Recommendation Engine</div>
+      <div class="project-desc">Hybrid recommendation system for e-commerce. Increased click-through rate by 34%.</div>
+      <div class="project-chips"><span class="chip">Python</span><span class="chip">Surprise</span><span class="chip">Redis</span></div>
+      <a href="#" class="project-link">View Project →</a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="padding-top:0;">
+  <div class="section-header scroll-reveal">
+    <span class="section-tag">05 / Experience</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="section-title scroll-reveal" style="margin-bottom:56px;">Professional <em>Journey</em></div>
+  <div class="exp-grid">
+    <div class="scroll-reveal">
+      <div class="exp-col-title">Work Experience</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2023 — Present</div>
+          <div class="timeline-role">Senior Data Scientist</div>
+          <div class="timeline-org">Tech Company / Startup</div>
+          <div class="timeline-desc">Leading ML initiatives, building production models, mentoring junior scientists.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2021 — 2023</div>
+          <div class="timeline-role">Data Scientist</div>
+          <div class="timeline-org">Analytics Firm</div>
+          <div class="timeline-desc">Developed predictive models for e-commerce, finance, and healthcare clients.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2019 — 2021</div>
+          <div class="timeline-role">Data Analyst</div>
+          <div class="timeline-org">First Job</div>
+          <div class="timeline-desc">SQL analysis, dashboards, A/B testing for product growth teams.</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-reveal">
+      <div class="exp-col-title">Education &amp; Certifications</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2019</div>
+          <div class="timeline-role">B.Tech / M.Tech</div>
+          <div class="timeline-org">Computer Science &amp; Engineering</div>
+          <div class="timeline-desc">Thesis on deep learning for image segmentation.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2022</div>
+          <div class="timeline-role">AWS Certified ML Specialist</div>
+          <div class="timeline-org">Amazon Web Services</div>
+          <div class="timeline-desc">ML on AWS, SageMaker, cloud-native pipelines.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2023</div>
+          <div class="timeline-role">Deep Learning Specialization</div>
+          <div class="timeline-org">Coursera / DeepLearning.AI</div>
+          <div class="timeline-desc">5-course specialization by Andrew Ng.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="padding-top:0;">
+  <div class="section-header scroll-reveal">
+    <span class="section-tag">06 / Testimonials</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="section-title scroll-reveal" style="margin-bottom:48px;">What Clients <em>Say</em></div>
+  <div class="testimonials-slider scroll-reveal">
+    <div class="testimonials-track" id="testimonialsTrack">
+      <div class="testimonial-card">
+        <div class="test-quote">"</div>
+        <div class="test-text">Sundram delivered an exceptional fraud detection model that saved our company lakhs every month. His attention to detail and communication was outstanding.</div>
+        <div class="test-author"><div class="test-avatar">RK</div><div><div class="test-name">Rahul Kumar</div><div class="test-role">CTO, FinTech Startup</div></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="test-quote">"</div>
+        <div class="test-text">The NLP model Sundram built for us processes thousands of customer reviews daily with incredible accuracy. Best investment we made this year.</div>
+        <div class="test-author"><div class="test-avatar">PS</div><div><div class="test-name">Priya Sharma</div><div class="test-role">Product Manager, E-Commerce</div></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="test-quote">"</div>
+        <div class="test-text">Absolutely world-class work. The dashboard he created gives our team real-time insights we never had before. Highly recommend Sundram!</div>
+        <div class="test-author"><div class="test-avatar">AM</div><div><div class="test-name">Amit Mehta</div><div class="test-role">Data Head, Healthcare Co.</div></div></div>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="slider-btn" id="prevBtn">←</button>
+      <div class="slider-dots" id="sliderDots"></div>
+      <button class="slider-btn" id="nextBtn">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div id="contact-section">
+  <div class="contact-inner">
+    <div class="contact-info scroll-reveal">
+      <h2>Let's build something <em>incredible</em> together</h2>
+      <p>Have a project in mind? Let's talk!</p>
+      <div class="contact-links">
+        <a href="mailto:sundram@example.com" class="contact-link"><div class="link-icon">✉</div>sundram@example.com</a>
+        <a href="https://linkedin.com/in/sundramtiwari" target="_blank" class="contact-link"><div class="link-icon">in</div>linkedin.com/in/sundramtiwari</a>
+        <a href="https://github.com/sundramtiwari" target="_blank" class="contact-link"><div class="link-icon">⌥</div>github.com/sundramtiwari</a>
+        <a href="https://wa.me/919999999999" target="_blank" class="contact-link"><div class="link-icon">💬</div>WhatsApp Chat</a>
+      </div>
+    </div>
+    <div class="scroll-reveal">
+      <form class="contact-form" id="contactForm">
+        <div id="form-status"></div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Your Name</label><input type="text" class="form-input" name="name" placeholder="Rahul Sharma" required></div>
+          <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" name="email" placeholder="rahul@example.com" required></div>
+        </div>
+        <div class="form-group"><label class="form-label">Subject</label><input type="text" class="form-input" name="subject" placeholder="Project Collaboration"></div>
+        <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" name="message" placeholder="Tell me about your project..." required></textarea></div>
+        <div class="form-submit">
+          <button type="submit" class="btn-send" id="submitBtn">Send Message →</button>
+          <div class="form-note">Direct to Sundram's inbox.</div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Sundram <span>Tiwari</span></div>
+  <div class="footer-links">
+    <a href="https://github.com/sundramtiwari" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/sundramtiwari" target="_blank">LinkedIn</a>
+    <a href="https://kaggle.com/sundramtiwari" target="_blank">Kaggle</a>
+  </div>
+  <div class="footer-copy">© 2025 All rights reserved.</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
