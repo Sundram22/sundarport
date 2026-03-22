@@ -1,31 +1,4 @@
-# 🚀 Sundram Tiwari — Portfolio V2
 
-## ✨ Naye Features (V2)
-
-| Feature | Status |
-|---------|--------|
-| 🌀 Loading Screen Animation | ✅ |
-| ✨ Particle Background | ✅ |
-| 🖱️ Custom Glowing Cursor | ✅ |
-| ⌨️ Typing Effect Hero | ✅ |
-| 🌙 Dark / Light Mode Toggle | ✅ |
-| 📊 Scroll Progress Bar | ✅ |
-| ⬆️ Back to Top Button | ✅ |
-| 💬 WhatsApp Floating Button | ✅ |
-| ↓ Resume Download Button | ✅ |
-| 🔍 Skill Filter Buttons | ✅ |
-| 🗂️ Project Filter Buttons | ✅ |
-| 💼 Services Section | ✅ |
-| ⭐ Testimonials Slider | ✅ |
-| 🔢 Animated Counters | ✅ |
-| 📈 Proficiency Bars | ✅ |
-| 👁️ Scroll Reveal Animations | ✅ |
-| 📱 Fully Responsive Mobile | ✅ |
-| 📧 Google Sheets Contact Form | ✅ |
-| 🔗 Social Links | ✅ |
-| SEO Meta Tags | ✅ |
-
----
 
 ## 📁 Folder Structure
 
